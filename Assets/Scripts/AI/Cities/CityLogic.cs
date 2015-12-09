@@ -21,7 +21,9 @@ public class CityLogic : MonoBehaviour {
 
     void OnGUI()
     {
-        GUI.Label(new Rect(transform.position.x, transform.position.y, transform.position.x + 100, transform.position.y + 100),
-            "Defender Strength: " + DefenderStrength.ToString());
+        var guiPosition = Camera.main.WorldToScreenPoint(transform.position);
+        guiPosition.y = Screen.height - guiPosition.y;
+        GUI.Label(new Rect(guiPosition.x, guiPosition.y, guiPosition.x+50, guiPosition.y+50),
+            this.gameObject.name + " \nDefender Strength: " + DefenderStrength.ToString());
     }
 }

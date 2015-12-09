@@ -22,6 +22,7 @@ public class HordeAttack : HordeManagerScript
             if (HasTurned())
             {
                Target.GetComponent<CityLogic>().DefenderStrength -= Equations.GetDefenderCasualityFromHordeAttack(this.gameObject);
+           
 
             }
         }
@@ -30,7 +31,7 @@ public class HordeAttack : HordeManagerScript
 
     private void AttackStartSetup()
     {
-        HordeStrengthStartOfAttack = HordeStrength;
+       
 
     }
 
@@ -40,10 +41,6 @@ public class HordeAttack : HordeManagerScript
         set { hordeStrengthStartOfAttack = value; }
     }
 
-    void OnGUI()
-    {
-        GUI.Label(new Rect(transform.position.x, transform.position.y + 150, transform.position.x + 100, transform.position.y + 250),
-            "Horde Strength: " + HordeStrength.ToString());
-    }
+
 
 }

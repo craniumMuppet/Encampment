@@ -8,7 +8,7 @@ public class HordeManagerScript : ManagerParent {
     protected static List<GameObject> hordeTargets = new List<GameObject>();
     protected HordeStateMachine stateMachine;
     protected GameObject target;
-    protected int hordeStrength;
+
 
 
     void Awake ()
@@ -17,9 +17,6 @@ public class HordeManagerScript : ManagerParent {
         HordeTargets.AddRange(GameObject.FindGameObjectsWithTag("HordeTarget"));
         StateMachine = this.gameObject.GetComponent<HordeStateMachine>();
             Debug.Log("HordeTargets Count: " + HordeTargets.Count);
-
-        HordeStrength = 10000;
-
 
 
         Target = HordeTargets[0]; //change this later, temp!
@@ -53,11 +50,11 @@ public class HordeManagerScript : ManagerParent {
         set { target = value; }
     }
 
-    public int HordeStrength
-    {
-        get { return hordeStrength; }
-        set { hordeStrength = value; }
-    }
+
+
+
+
+
 
 
 }

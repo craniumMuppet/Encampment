@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 
 
 public class ManagerParent : MonoBehaviour {
@@ -41,5 +42,15 @@ public class ManagerParent : MonoBehaviour {
         Debug.Log("Seed: " + DateTimeToInt(DateTime.Now));
     }
 
+    public static List<GameObject> GameObjectArrayToList(GameObject[] array)
+    {
+        //converts an array of gameobjects to a list of gameobjects
 
+        List<GameObject> list = new List<GameObject>();
+        for (int i = 0; i < array.Length; i++)
+        {
+            list[i] = array[i];
+        }
+        return list;
+    }
 }

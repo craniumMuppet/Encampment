@@ -8,7 +8,8 @@ public class Equations : MonoBehaviour {
 
     public static int GetDefenderCasualityFromHordeAttack(GameObject AttackingHorde)
     {
-        return (int)(AttackingHorde.GetComponent<HordeAttack>().HordeStrength * DAMAGE_DEALT_TO_DEFENDERS_BY_HORDEATTACK_MODIFIER);
+        //return (int)(AttackingHorde.GetComponent<HordeAttack>().HordeStrength * DAMAGE_DEALT_TO_DEFENDERS_BY_HORDEATTACK_MODIFIER);
+        return -1;
     }
 
     public static int GetHordeCasualityFromDefendingCity(GameObject DefendingCity)

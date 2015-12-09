@@ -131,6 +131,16 @@ public class HordeMovement : HordeManagerScript {
         set { nextTargetIterator = value; }
     }
 
+    void OnGUI()
+    {
 
+ 
+        var guiPosition = Camera.main.WorldToScreenPoint(transform.position);
+        guiPosition.y = Screen.height - guiPosition.y;
+        //GUI.Label(new Rect(guiPosition.x, guiPosition.y, guiPosition.x + 50, guiPosition.y + 50),
+            //this.gameObject.name + " \nHorde Strength: " + HordeStrength.ToString());
+
+
+    }
 
 }
