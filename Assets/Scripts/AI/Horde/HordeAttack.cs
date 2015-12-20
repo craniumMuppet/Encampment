@@ -21,7 +21,7 @@ public class HordeAttack : HordeManagerScript
         {
             if (HasTurned())
             {
-               Target.GetComponent<CityLogic>().DefenderStrength -= Equations.GetDefenderCasualityFromHordeAttack(this.gameObject);
+               Target.GetComponent<CityStats>().DefenderStrength -= Equations.GetDefenderCasualityFromHordeAttack(this.gameObject);
            
 
             }

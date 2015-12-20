@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class HordeManagerScript : ManagerParent {
+public class HordeManagerScript : CityAndHordeManager {
 
+    //specific horde stuff not to be used by cities
     protected static List<GameObject> hordeTargets = new List<GameObject>();
     protected HordeStateMachine stateMachine;
     protected GameObject target;
+
 
 
 
@@ -26,10 +28,10 @@ public class HordeManagerScript : ManagerParent {
 
 
 
-    protected bool HasTurned()
-    {
-        return TurnManagerScript.HasTurnedRecently;
-    }
+
+
+
+
 	
 
     public static List<GameObject> HordeTargets

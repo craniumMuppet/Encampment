@@ -47,10 +47,8 @@ public class ManagerParent : MonoBehaviour {
         //converts an array of gameobjects to a list of gameobjects
 
         List<GameObject> list = new List<GameObject>();
-        for (int i = 0; i < array.Length; i++)
-        {
-            list[i] = array[i];
-        }
+        list.AddRange(array);
         return list;
+
     }
 }

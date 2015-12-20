@@ -14,7 +14,8 @@ public class Equations : MonoBehaviour {
 
     public static int GetHordeCasualityFromDefendingCity(GameObject DefendingCity)
     {
-        return (int)( DefendingCity.GetComponent<CityLogic>().DefenderStrength * DAMAGE_DEALT_TO_HORDE_BY_DEFENDING_CITY_MODIFIER);
+        return -1;
+        //return (int)( DefendingCity.GetComponent<CityLogic>().DefenderStrength * DAMAGE_DEALT_TO_HORDE_BY_DEFENDING_CITY_MODIFIER);
     }
 
 }

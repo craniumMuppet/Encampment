@@ -74,7 +74,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AI\Cities\CityLogic.cs" />
+    <Compile Include="Assets\Scripts\AI\Cities\CityStats.cs" />
+    <Compile Include="Assets\Scripts\AI\Cities\HeavensRefuge.cs" />
+    <Compile Include="Assets\Scripts\AI\CityAndHordeManager.cs" />
     <Compile Include="Assets\Scripts\AI\Horde\HordeAttack.cs" />
     <Compile Include="Assets\Scripts\AI\Horde\HordeManagerScript.cs" />
     <Compile Include="Assets\Scripts\AI\Horde\HordeMovement.cs" />
@@ -82,6 +84,8 @@
     <Compile Include="Assets\Scripts\AI\Horde\HordeStats.cs" />
     <Compile Include="Assets\Scripts\Game Design Equations\Equations.cs" />
     <Compile Include="Assets\Scripts\Game Design Equations\Units\BogDevourerStats.cs" />
+    <Compile Include="Assets\Scripts\Game Design Equations\Units\IronKnight.cs" />
+    <Compile Include="Assets\Scripts\Game Design Equations\Units\Unit.cs" />
     <Compile Include="Assets\Scripts\TurnLogic\TurnManagerScript.cs" />
     <Compile Include="Assets\Scripts\UI\Map\ManagerParent.cs" />
     <Compile Include="Assets\Scripts\UI\Map\MapManager.cs" />

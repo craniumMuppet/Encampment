@@ -7,41 +7,24 @@ public class HordeStats : HordeManagerScript
 {
 
     protected int hordeStrength;
-    private List<GameObject> hordeUnits = new List<GameObject>();
-
 
     void Awake()
     {
-        hordeUnits = GameObjectArrayToList(GameObject.FindGameObjectsWithTag("HordeUnits"));
+        UnitTypes = GameObjectArrayToList(GameObject.FindGameObjectsWithTag("HordeUnits"));
+        UnitAmount = new Dictionary<GameObject, int>() { { FindUnit(UnitTypes, "BogDevourer"), 1000 } };
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(UnitAmount[ (FindUnit(UnitTypes, "BogDevourer"))]);
+
 
     }
 
-    public List<GameObject> HordeUnits
-    {
-        get { return hordeUnits; }
-        set { hordeUnits = value; }
-    }
 
-    private void InitHordeUnits(int NumberOfUnits, string unit)
-    {
-        /*
-        
-        Used to initialize all the units and puts them into the HordeUnits List
-        
-        Loops through the numbers of units (see constats above) and creates them and then stores them in the hordeUnit list
-        */
-        for (int i = 0; i < NumberOfUnits; i++)
-        {
 
-            GameObject Instance = Instantiate(Resources.Load("Prefabs/Units/" + unit, typeof(GameObject))) as GameObject;
-            HordeUnits.Add(Instance);
-        }
-    }
+
 
 
 }
