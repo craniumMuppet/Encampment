@@ -4,16 +4,17 @@ using System;
 using System.Collections.Generic;
 
 
-public class ManagerParent : MonoBehaviour {
+public abstract class ManagerParent : MonoBehaviour {
 
-    protected Ray ray;
-    protected RaycastHit hit;
-    protected const int LEFT_BUTTON = 0;
+    protected Ray               ray;
+    protected RaycastHit        hit;
+    protected const int         LEFT_BUTTON = 0;
+    protected const int         RIGHT_BUTTON = 1;
 
-    
 
-    
-    
+
+
+
 
     protected bool RayCastToObject(string gameObjectTag)
     {
@@ -29,6 +30,19 @@ public class ManagerParent : MonoBehaviour {
             }
         }
         return false;
+    }
+    protected Vector3 RayCastToPosition(string gameObjectTag)
+    {
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.transform.tag.Equals(gameObjectTag))
+            {
+                return hit.point;
+            }
+        }
+        return new Vector3(0,0,0);
+ 
     }
 
     protected static int DateTimeToInt(DateTime date)
@@ -51,4 +65,6 @@ public class ManagerParent : MonoBehaviour {
         return list;
 
     }
+
+
 }

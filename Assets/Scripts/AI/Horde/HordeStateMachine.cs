@@ -20,6 +20,7 @@ public class HordeStateMachine : MonoBehaviour {
         hordeAttack = this.gameObject.GetComponent<HordeAttack>();
         hordeMovement = this.gameObject.GetComponent<HordeMovement>();
         hordeState = State.MoveToCity;
+        ResetStates();
 
     }
 	
@@ -31,6 +32,7 @@ public class HordeStateMachine : MonoBehaviour {
 
     private void StateManager()
     {
+
         if(hordeState == State.MoveToCity)
         {
             hordeMovement.updateOn = true;
@@ -41,6 +43,20 @@ public class HordeStateMachine : MonoBehaviour {
         {
             hordeAttack.updateOn = true;
             hordeMovement.updateOn = false;
+        }
+    }
+
+    public void ResetStates()
+    {
+        if (hordeMovement.HasReachedTarget())
+        {
+            hordeMovement.updateOn = false;
+            hordeAttack.updateOn = true;
+        }
+        else
+        {
+            hordeMovement.updateOn = true;
+            hordeAttack.updateOn = false;
         }
     }
 

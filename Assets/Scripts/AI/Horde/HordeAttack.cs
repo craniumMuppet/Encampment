@@ -17,14 +17,9 @@ public class HordeAttack : HordeManagerScript
 	// Update is called once per frame
 	void Update ()
     {
-        if (updateOn)
+        if (isActive && updateOn)
         {
-            if (HasTurned())
-            {
-               Target.GetComponent<CityStats>().DefenderStrength -= Equations.GetDefenderCasualityFromHordeAttack(this.gameObject);
-           
 
-            }
         }
 
 	}

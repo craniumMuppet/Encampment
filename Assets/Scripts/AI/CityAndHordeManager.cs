@@ -2,15 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public abstract class CityAndHordeManager : ManagerParent {
+public class CityAndHordeManager : ManagerParent {
 
-    private List<GameObject> unitTypes = new List<GameObject>(); //the hordeUnitGameobject Templates
-    private Dictionary<GameObject, int> unitAmount; //stores the amount of units in the horde. Keys are the horde units gameobjects (located in hordeUnits)
+    private List<GameObject>                    unitTypes = new List<GameObject>(); //the hordeUnitGameobject Templates
+    private Dictionary<GameObject, int>         unitAmount; //stores the amount of units in the horde. Keys are the horde units gameobjects (located in hordeUnits)
+    public static bool                         isActive = false;
 
-    // Use this for initialization
-    void Start () {
-	
-	}
+
+
+
 
     // Update is called once per frame
     protected GameObject FindUnit(List<GameObject> list, string gameObject)
@@ -28,10 +28,6 @@ public abstract class CityAndHordeManager : ManagerParent {
         return null;
 
     }
-    protected bool HasTurned()
-    {
-        return TurnManagerScript.HasTurnedRecently;
-    }
 
     public List<GameObject> UnitTypes
     {
@@ -43,6 +39,12 @@ public abstract class CityAndHordeManager : ManagerParent {
     {
         get { return unitAmount; }
         set { unitAmount = value; }
+    }
+
+    public static bool IsActive
+    {
+        get { return isActive; }
+        set { isActive = value; }
     }
 
 }

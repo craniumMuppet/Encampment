@@ -23,15 +23,7 @@ public class HordeManagerScript : CityAndHordeManager {
 
         Target = HordeTargets[0]; //change this later, temp!
 
-
     }
-
-
-
-
-
-
-
 	
 
     public static List<GameObject> HordeTargets

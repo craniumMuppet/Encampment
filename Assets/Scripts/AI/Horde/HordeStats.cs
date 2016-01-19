@@ -17,7 +17,7 @@ public class HordeStats : HordeManagerScript
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(UnitAmount[ (FindUnit(UnitTypes, "BogDevourer"))]);
+       // Debug.Log(UnitAmount[ (FindUnit(UnitTypes, "BogDevourer"))]);
 
 
     }

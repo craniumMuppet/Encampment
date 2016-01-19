@@ -7,26 +7,17 @@ using System;
 
 public class HordeMovement : HordeManagerScript {
 
-    protected NavMeshAgent agent;
-    DateTime seed = new DateTime();
  
-    int nextTargetIterator;
-    private bool isMoving;
+    private int                 nextTargetIterator;
+    public bool                 updateOn =  true;
+    protected NavMeshAgent      agent;
 
-    public bool updateOn = true;
-   
 
-	void Start ()
+    void Start ()
     {
 
         Agent = this.gameObject.GetComponent<NavMeshAgent>();
- 
-
         NextTargetIterator = 0;
-
-
-        IsMoving = false;
-
         SetRandomSeed();
    
 
@@ -35,10 +26,9 @@ public class HordeMovement : HordeManagerScript {
 	// Update is called once per frame
 	void Update ()
     {
-        if (updateOn)
+        if (IsActive && updateOn)
         {
-            CheckTurn();
-            Movement();
+            Movement();   
         }
     }
 
@@ -64,7 +54,7 @@ public class HordeMovement : HordeManagerScript {
         }
     }
 
-    private bool HasReachedTarget()
+    public bool HasReachedTarget()
     {
         /*
             Checks if the agent has a path, or if its pending
@@ -77,8 +67,7 @@ public class HordeMovement : HordeManagerScript {
                 
                 if (!Agent.hasPath || Agent.velocity.sqrMagnitude == 0f)
                 {
-                        Debug.Log("Horde " + this.gameObject.name + " has reached target. IsMoving set to: false");
-                    IsMoving = false;
+                        //Debug.Log("Horde " + this.gameObject.name + " has reached target. IsMoving set to: false");
                     return true;
                 }
             }
@@ -88,49 +77,28 @@ public class HordeMovement : HordeManagerScript {
 
     private void Movement()
     {
-        if (IsMoving)
+
+            //  Debug.Log("HordeMovement - Movement: Horde is moving");
+        if (HasReachedTarget())
         {
-                Debug.Log("Player has turned, beginning movement. IsMoving: True");
-            if (HasReachedTarget())
-            {
-                StateMachine.HordeState = HordeStateMachine.State.AttackCity;
-            }
-            else
-            {
-                MoveToTarget();
-            }
+            StateMachine.HordeState = HordeStateMachine.State.AttackCity;
         }
-
-
-       
-    }
-
-    private void CheckTurn()
-    {
-        //checks if the player has turned recently via turnmanager
-        if(HasTurned())
+        else
         {
-            IsMoving = true;
+            MoveToTarget();
         }
     }
+
     private NavMeshAgent Agent
     {
         get { return agent; }
         set { agent = value; }
-    }
-
-
-    private bool IsMoving
-    {
-        get { return isMoving; }
-        set { isMoving = value; }
     }
     private int NextTargetIterator
     {
         get { return nextTargetIterator; }
         set { nextTargetIterator = value; }
     }
-
     void OnGUI()
     {
 
@@ -142,5 +110,6 @@ public class HordeMovement : HordeManagerScript {
 
 
     }
+
 
 }

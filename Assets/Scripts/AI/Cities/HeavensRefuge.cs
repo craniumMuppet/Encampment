@@ -12,7 +12,8 @@ public class HeavensRefuge : CityAndHordeManager {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 	
 	}
 }
