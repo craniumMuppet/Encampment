@@ -66,8 +66,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AI\Cities\City.cs" />
     <Compile Include="Assets\Scripts\AI\Cities\CityParent.cs" />
-    <Compile Include="Assets\Scripts\AI\Cities\CityStats.cs" />
     <Compile Include="Assets\Scripts\AI\Cities\HeavensRefuge.cs" />
     <Compile Include="Assets\Scripts\AI\CityAndHordeManager.cs" />
     <Compile Include="Assets\Scripts\AI\Horde\HordeAttack.cs" />

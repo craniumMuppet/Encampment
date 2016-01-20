@@ -2,13 +2,23 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class CityStats : CityAndHordeManager {
+public class City : CityAndHordeManager {
 
-	// Use this for initialization
+    public string cityName;
 
-	
-	// Update is called once per frame
-	
+    void Start()
+    {
+       
+    }
+
+
+    public string CityName
+    {
+        get { return cityName; }
+        set { cityName = value; }
+    }
+
+
 
     void OnGUI()
     {

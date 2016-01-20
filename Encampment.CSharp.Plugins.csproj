@@ -180,9 +180,7 @@
     <Compile Include="Assets\Standard Assets\Vehicles\Aircraft\Scripts\AeroplanePropellerAnimator.cs" />
     <Compile Include="Assets\Standard Assets\Vehicles\Aircraft\Scripts\AeroplaneUserControl2Axis.cs" />
     <Compile Include="Assets\Standard Assets\Vehicles\Aircraft\Scripts\AeroplaneUserControl4Axis.cs" />
-    <Compile Include="Assets\Standard Assets\Vehicles\Aircraft\Scripts\JetParticleEffect (1).cs" />
     <Compile Include="Assets\Standard Assets\Vehicles\Aircraft\Scripts\JetParticleEffect.cs" />
-    <Compile Include="Assets\Standard Assets\Vehicles\Aircraft\Scripts\LandingGear (1).cs" />
     <Compile Include="Assets\Standard Assets\Vehicles\Aircraft\Scripts\LandingGear.cs" />
     <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\BrakeLight.cs" />
     <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\CarAIControl.cs" />
@@ -190,13 +188,9 @@
     <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\CarController.cs" />
     <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\CarSelfRighting.cs" />
     <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\CarUserControl.cs" />
-    <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\Mudguard (1).cs" />
     <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\Mudguard.cs" />
-    <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\SkidTrail (1).cs" />
     <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\SkidTrail.cs" />
-    <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\Suspension (1).cs" />
     <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\Suspension.cs" />
-    <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\WheelEffects (1).cs" />
     <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
   </ItemGroup>
   <ItemGroup>

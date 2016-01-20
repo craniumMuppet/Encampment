@@ -2,28 +2,41 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public abstract class Unit : MonoBehaviour {
+public class Unit : MonoBehaviour {
 
     // Use this for initialization
-    protected static int health;
-    protected static int damage;
-    protected static int faith;
-    protected static int amount;
+    public  int health;
+    public  int damage;
+    public  int faith;
+    public  int amount;
+    public  string unitName;
 
-    public static int Health
+    void Start()
+    {
+        Debug.Log(UnitName);
+    }
+
+    public string UnitName
+    {
+        get { return unitName; }
+        set { unitName = value; }
+    }
+
+
+    public int Health
     {
         get { return health; }
         set { health = value; }
     }
 
 
-    public static int Damage
+    public int Damage
     {
         get { return damage; }
         set { damage = value; }
     }
 
-    public static int Faith
+    public int Faith
     {
         get { return faith; }
         set { faith = value; }
